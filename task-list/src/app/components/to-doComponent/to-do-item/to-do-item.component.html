@@ -1,1 +1,14 @@
-<p>to-do-item works!</p>
+<li [class.completed]="todo.completed" [class.editing]="editing">
+  <div class="view">
+    <input class="toggle" type="checkbox" [formControl]="chkCompleted" />
+    <label (dblclick)="edit()">{{ todo.text }}</label>
+    <button class="destroy"></button>
+  </div>
+  <input
+    class="edit"
+    [formControl]="txtInput"
+    type="text"
+    #editInput
+    (blur)="finishEdition()"
+  />
+</li>

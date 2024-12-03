@@ -1,1 +1,4 @@
-<p>todo-add-component works!</p>
+<div class="header">
+  <h1>TO-DOs</h1>
+  <input class="new-todo" placeholder="¿Qué planeas hacer hoy?" [formControl]="txtInput" (keyup.enter)="addToDo()" autofocus />
+</div>
