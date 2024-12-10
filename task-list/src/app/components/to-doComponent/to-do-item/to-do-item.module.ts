@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ToDoItemComponent } from './to-do-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [ToDoItemComponent],
   imports: [CommonModule, ReactiveFormsModule],

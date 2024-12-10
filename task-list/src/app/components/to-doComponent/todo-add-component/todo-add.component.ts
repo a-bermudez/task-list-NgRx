@@ -7,21 +7,19 @@ import { create } from '../state/todo.actions';
 @Component({
   selector: 'app-todo-add',
   templateUrl: './todo-add.component.html',
-  styleUrls: ['./todo-add.component.scss']
+  styleUrls: ['./todo-add.component.scss'],
 })
 export class TodoAddComponent {
   txtInput: FormControl;
 
   constructor(private store: Store<AppState>) {
-    this.txtInput = new FormControl('',
-      Validators.required
-    )
+    this.txtInput = new FormControl('', Validators.required);
   }
 
-  addToDo():void {
-    if(this.txtInput.valid) {
-      this.store.dispatch(create({text:this.txtInput.value}))
-      this.txtInput.reset()
+  addToDo(): void {
+    if (this.txtInput.valid) {
+      this.store.dispatch(create({ text: this.txtInput.value }));
+      this.txtInput.reset();
     }
   }
 }

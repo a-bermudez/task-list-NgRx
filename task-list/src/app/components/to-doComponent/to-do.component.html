@@ -2,26 +2,14 @@
   <app-todo-add></app-todo-add>
 
   <section class="main">
-    <input id="toggle-all" class="toggle-all" type="checkbox" />
+    <input
+      id="toggle-all"
+      (click)="toggleAll()"
+      class="toggle-all"
+      type="checkbox"
+    />
     <label for="toggle-all">marcar todas como completadas</label>
     <app-to-do-list></app-to-do-list>
   </section>
-  <footer class="footer">
-				<!-- This should be `0 items left` by default -->
-				<span class="todo-count"><strong>0</strong> Tareas pendientes</span>
-				<!-- Remove this if you don't implement routing -->
-				<ul class="filters">
-					<li>
-						<a class="selected" href="#/">Todas</a>
-					</li>
-					<li>
-						<a href="#/active">Activas</a>
-					</li>
-					<li>
-						<a href="#/completed">Completedas</a>
-					</li>
-				</ul>
-				<!-- Hidden if no completed items are left ↓ -->
-				<button class="clear-completed">Limpiar completadas</button>
-			</footer>
+  <app-to-do-filter></app-to-do-filter>
 </section>

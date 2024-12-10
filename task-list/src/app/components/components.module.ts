@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ToDoModule } from './to-doComponent/to-do.module';
 
-
-
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [ToDoModule],
   exports: [ToDoModule],
 })

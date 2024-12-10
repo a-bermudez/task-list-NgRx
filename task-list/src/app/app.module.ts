@@ -10,6 +10,7 @@ import { PagesModule } from './pages/pages.module';
 import { StoreModule } from '@ngrx/store';
 import { _todoReducer } from './components/to-doComponent/state/todo.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { _appReducers } from './app.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ComponentsModule,
     SharedModule,
     PagesModule,
-    StoreModule.forRoot({ todos: _todoReducer }),
+    StoreModule.forRoot(_appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode
