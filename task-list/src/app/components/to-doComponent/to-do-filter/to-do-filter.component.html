@@ -4,7 +4,7 @@
   >
   <ul class="filters">
     <li *ngFor="let filter of filters" (click)="changeFilter(filter)">
-      <a [class.selected]="filter === currentFilter" href="#/filter">{{
+      <a [class.selected]="filter === currentFilter" [href]="'#/'+ currentFilter">{{
         filter | titlecase
       }}</a>
     </li>
